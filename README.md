@@ -14,3 +14,4 @@ My solution to the internships challenge propsed by Klarx.
  6. For the front-end design, I used Materialize the CSS framework based on Material Design by Google.
  7. I included my 'currencydb' used while testing and developing the application in .csv format, exported it from
  postgres.
+ 8. I included a few screenshots of the application running in the 'screenshots' folder.
