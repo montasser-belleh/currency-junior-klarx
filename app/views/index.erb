@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<title> home </title>
+  <head>
+		<meta charset='UTF-8' />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	</head>
+  <body>
+	<nav>
+	<div class="nav-wrapper teal darken-2 z-depth-2">
+		<a class="brand-logo center">
+			<i class="large material-icons prefix">monetization_on CONVERT</i>
+		</a>
+	</div>
+	</nav>
+	<div class='container'>
+   <br>
+    	<form action='convert' method='post'>
+	  		<ul class='unstyled'>
+					<h5>Value</h5>
+					<input required="required" type="text" name="original_sum" placeholder="value to convert">
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card">
+						<div class="card-content z-depth-2">
+							<span class="card-title">From</span>
+	  						<% Currencies.each do |id, text| %>
+	  						<li>
+								<p>
+								<label>
+								<input required="required" type='radio' name='initial_currency' value='<%= id %>' id='original_<%= id %>' />
+								<span><%= text %></span>
+								</label>
+								</p>
+								</li>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				<div class="col s12 m6">
+					<div class="card">
+						<div class="card-content z-depth-2">
+	  					<span class="card-title">To</span>
+	  						<% Currencies.each do |id, text| %>
+								<li>
+								<p>
+								<label>
+								<input required="required" type='radio' name='target_currency' value='<%= id %>' id='original_<%= id %>' />
+								<span><%= text %></span>
+								</label>
+								</p>
+								</li>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="progress">
+				<div class="determinate" style="width: 50%"></div>
+				</div>
+				<div class="row">
+				<div class="col l6 s12">
+			  <button type='submit' class="btn-large waves-effect waves-light red pulse"><i class="material-icons left">trending_up</i>Convert</button>
+			  </div>
+				</form>
+				<div class="col l6 s12">
+			<form action='history' method='post'>
+			<button type='submit' class="btn-large waves-effect waves-light blue pulse"><i class="material-icons left">history</i>History</button>
+			</form>
+			</div>
+			</div>
+			</div>
+	<footer class="page-footer teal lighten">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Currency Converting Website</h5>
+				<p class="grey-text text-lighten-4">This website was developed as a solution to the technical challenge for interns proposed by KLARX.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text"><i class="material-icons prefix">account_circle</i> Developer</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/montasser-naghmouchi-72488511a/">Montasser Naghmouchi</a></li>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		© 2019 Klarx Internship Challenge
+		</div>
+	</div>
+</footer>
+  </body>
+</html>

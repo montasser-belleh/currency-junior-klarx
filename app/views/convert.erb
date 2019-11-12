@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>convert</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body>
+  <nav>
+	<div class="nav-wrapper teal darken-2 z-depth-2">
+	  <a class="brand-logo center">
+      <i class="large material-icons prefix">monetization_on CONVERTED</i>
+    </a>
+  </div>
+  </nav>  
+  <br>
+  <div class='container'>
+    <div class="row">
+      <div class="col s12 m8">
+        <div class="card">
+          <div class="card-content z-depth-3">
+            <h5>Original amount:  <%= @original_sum %> <%= @original %> </h5>
+            <h5>Converted amount: <%= @converted_sum %> <%= @converted %></h5>
+          </div>
+        </div>
+      </div>
+    <div class="col s12 m3">
+      <div class="card blue lighten-1 z-depth-4">
+        <div class="card-content white-text">
+        <span class="card-title">
+        <i class="material-icons">warning</i> Rates </span> 
+        <p> 1 <%= @original %> = <%= @rate %> <%= @converted %></p>
+        </div>
+      </div>
+    </div>
+    <div class="progress">
+    <div class="determinate" style="width: 1000%"></div>
+    </div>
+    </div>
+
+  <div class="row">
+  <div class="col l6 s12">
+  <form action='/' method='post'>
+  <button type='submit' class="btn-large waves-effect waves-light red pulse"><i class="material-icons left">trending_up</i>Convert Again</button>
+  </div>
+  </form>
+  <div class="col l6 s12">
+<form action='history' method='post'>
+<button type='submit' class="btn-large waves-effect waves-light blue pulse"><i class="material-icons left">history</i>History</button>
+</form>
+</div>
+</div>
+</div>
+  <footer class="page-footer teal lighten">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Currency Converting Website</h5>
+				<p class="grey-text text-lighten-4">This website was developed as a solution to the technical challenge for interns proposed by KLARX.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text"><i class="material-icons prefix">account_circle</i> Developer</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/montasser-naghmouchi-72488511a/">Montasser Naghmouchi</a></li>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+		© 2019 Klarx Internship Challenge
+		</div>
+	</div>
+</footer>
+  
+  
+</body>
+</html>
