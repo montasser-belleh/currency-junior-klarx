@@ -15,10 +15,6 @@ describe 'Application' do
     expect(last_response.status).to eq 200
   end
 
-  it "history works!" do
-    post '/history'
-    expect(last_response.status).to eq 200
-  end
 end
 
 describe Conversion do
@@ -40,7 +36,7 @@ describe Money::Bank::CurrencylayerBank do
   describe 'with updated rates' do
     before do
       mclb = Money::Bank::CurrencylayerBank.new
-      mclb.access_key = '356a07db7a9e232ae1790933fed115f3'
+      mclb.access_key = open('app/api_key.txt').read
       mclb.update_rates
       Money.default_bank = mclb
       not_expired = mclb.expired?
